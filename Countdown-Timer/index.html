@@ -1,0 +1,86 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Countdown Timer</title>
+
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <main class="container">
+        <header class="header">
+            <h1>Countdown Timer</h1>
+            <p>Count down to your next special event.</p>
+        </header>
+
+        <section class="timer-card">
+            <form id="countdown-form">
+                <div class="form-group">
+                    <label for="event-name">Event Name</label>
+                    <input
+                        type="text"
+                        id="event-name"
+                        placeholder="e.g. Christmas"
+                        maxlength="60"
+                        required
+                    >
+                </div>
+
+                <div class="form-group">
+                    <label for="target-date">Event Date and Time</label>
+                    <input
+                        type="datetime-local"
+                        id="target-date"
+                        required
+                    >
+                </div>
+
+                <button type="submit" id="start-btn">
+                    Start Countdown
+                </button>
+            </form>
+
+            <section id="countdown" class="countdown hidden"
+                aria-live="polite">
+                <h2 id="countdown-title"></h2>
+
+                <div class="timer">
+                    <div class="time-unit">
+                        <span id="days">00</span>
+                        <small>Days</small>
+                    </div>
+
+                    <div class="time-unit">
+                        <span id="hours">00</span>
+                        <small>Hours</small>
+                    </div>
+
+                    <div class="time-unit">
+                        <span id="minutes">00</span>
+                        <small>Minutes</small>
+                    </div>
+
+                    <div class="time-unit">
+                        <span id="seconds">00</span>
+                        <small>Seconds</small>
+                    </div>
+                </div>
+
+                <p id="status-message"></p>
+
+                <button type="button" id="reset-btn" class="reset-btn">
+                    Choose Another Event
+                </button>
+            </section>
+        </section>
+
+        <footer>
+            <p>Every second brings you closer to your goal.</p>
+        </footer>
+    </main>
+</body>
+</html>

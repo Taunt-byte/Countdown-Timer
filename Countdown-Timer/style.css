@@ -1,0 +1,177 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(135deg, #172554, #1e40af);
+    color: #1f2937;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 24px;
+}
+
+.container {
+    width: 100%;
+    max-width: 650px;
+}
+
+.header {
+    text-align: center;
+    color: white;
+    margin-bottom: 28px;
+}
+
+.header h1 {
+    font-size: 2.4rem;
+    margin-bottom: 12px;
+}
+
+.header p {
+    color: #dbeafe;
+    line-height: 1.6;
+}
+
+.timer-card {
+    background: white;
+    padding: 30px;
+    border-radius: 16px;
+    box-shadow: 0 15px 40px rgb(0 0 0 / 20%);
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    margin-bottom: 20px;
+}
+
+label {
+    font-weight: bold;
+}
+
+input {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #d1d5db;
+    border-radius: 8px;
+    font: inherit;
+}
+
+input:focus-visible,
+button:focus-visible {
+    outline: 3px solid #60a5fa;
+    outline-offset: 3px;
+}
+
+button {
+    width: 100%;
+    padding: 13px 18px;
+    border: none;
+    border-radius: 8px;
+    background: #2563eb;
+    color: white;
+    font: inherit;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+button:hover {
+    background: #1d4ed8;
+}
+
+.countdown {
+    margin-top: 30px;
+    text-align: center;
+}
+
+.countdown h2 {
+    font-size: 1.5rem;
+    margin-bottom: 24px;
+    overflow-wrap: anywhere;
+}
+
+.timer {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 12px;
+    margin-bottom: 24px;
+}
+
+.time-unit {
+    background: #eff6ff;
+    padding: 18px 8px;
+    border-radius: 10px;
+}
+
+.time-unit span {
+    display: block;
+    color: #1d4ed8;
+    font-size: 2rem;
+    font-weight: bold;
+    font-variant-numeric: tabular-nums;
+}
+
+.time-unit small {
+    display: block;
+    margin-top: 8px;
+    color: #4b5563;
+    text-transform: uppercase;
+    font-size: 0.7rem;
+}
+
+#status-message {
+    margin-bottom: 20px;
+    line-height: 1.6;
+}
+
+.reset-btn {
+    background: #374151;
+}
+
+.reset-btn:hover {
+    background: #1f2937;
+}
+
+.hidden {
+    display: none;
+}
+
+footer {
+    margin-top: 24px;
+    text-align: center;
+    color: #dbeafe;
+    font-size: 0.9rem;
+}
+
+@media (max-width: 480px) {
+    .header h1 {
+        font-size: 1.9rem;
+    }
+
+    .timer-card {
+        padding: 20px 14px;
+    }
+
+    .timer {
+        gap: 6px;
+    }
+
+    .time-unit {
+        padding: 14px 4px;
+    }
+
+    .time-unit span {
+        font-size: 1.5rem;
+    }
+
+    .time-unit small {
+        font-size: 0.6rem;
+    }
+}
